@@ -29,7 +29,6 @@ jobs:
           branch_name=${{ github.event.inputs.branch-name }}
           boilerplate=${{ github.event.inputs.boilerplate }}
           git clone https://github.com/DevSkillsHQ/$boilerplate.git
-          rm -rf $boilerplate/.git
           cp -r $boilerplate/app* .
           rm -rf $boilerplate
           git add app*
