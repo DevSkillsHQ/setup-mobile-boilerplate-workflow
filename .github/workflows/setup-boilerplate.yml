@@ -1,4 +1,4 @@
-name: Setup boilerplate
+name: Setup mobile boilerplate
 
 on:
   workflow_call:
@@ -29,12 +29,9 @@ jobs:
           branch_name=${{ github.event.inputs.branch-name }}
           boilerplate=${{ github.event.inputs.boilerplate }}
           git clone https://github.com/DevSkillsHQ/$boilerplate.git
-          cp $boilerplate/package.json .
-          cp $boilerplate/cypress.json .
           cp -r $boilerplate/app* .
           rm -rf $boilerplate
-          npm i
-          git add cypress.json package* app*
+          git add app*
           git config --global user.email "setup-boilerplate@example.com"
           git config --global user.name "Setup boilerplate"
           git commit -m "Initialize boilerplate $boilerplate"
