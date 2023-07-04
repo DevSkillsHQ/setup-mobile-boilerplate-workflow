@@ -1,2 +1,2 @@
-# setup-boilerplate-workflow
-Reusable workflow to initialize a language specific coding test boilerplate
+# setup-mobile-boilerplate-workflow
+Reusable workflow to initialize a language-specific mobile coding test boilerplate.
