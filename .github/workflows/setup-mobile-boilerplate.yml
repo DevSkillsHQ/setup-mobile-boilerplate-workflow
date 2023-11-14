@@ -29,9 +29,10 @@ jobs:
           branch_name=${{ github.event.inputs.branch-name }}
           boilerplate=${{ github.event.inputs.boilerplate }}
           git clone https://github.com/DevSkillsHQ/$boilerplate.git
-          cp -r $boilerplate/* .
+          mkdir app
+          cp -r $boilerplate/* app/
           rm -rf $boilerplate
-          git add *
+          git add app
           git config --global user.email "setup-boilerplate@example.com"
           git config --global user.name "Setup boilerplate"
           git commit -m "Initialize boilerplate $boilerplate"
